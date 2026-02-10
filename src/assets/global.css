@@ -1,0 +1,187 @@
+:root {
+	--hmd-tw-text-default: ;
+	--hmd-tw-background-default: ;
+}
+
+body,
+:root[theme] .ui-content {
+	background-color: #27272a;
+	font-family: Inter, system-ui, sans-serif;
+	color: #d4d4d8;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Inter, system-ui, sans-serif;
+	-webkit-font-smoothing: subpixel-antialiased !important;
+	-moz-osx-font-smoothing: auto !important;
+	letter-spacing: 0.025em;
+	font-size: 14px;
+	line-height: 1.42857143;
+	margin: 0;
+}
+
+a {
+	color: #9894f9;
+}
+
+.summary {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	left: -304px;
+	top: 0;
+	width: 300px;
+	max-width: 100vw;
+	height: 100dvh;
+	left: 0;
+	border-right: 1px solid #52525b;
+}
+
+.summary > * {
+	display: none;
+}
+
+#open {
+	display: block;
+}
+
+.summary:has(> input[type="checkbox"]:checked) {
+	width: 35px;
+}
+
+#open > .btn {
+	padding: 6px;
+	margin: 3.5px;
+	line-height: 1;
+}
+
+input[type="checkbox"]:checked ~ .toolbar,
+input[type="checkbox"]:checked ~ #summary {
+	display: none;
+}
+
+input[type="checkbox"]:not(:checked) ~ #open {
+	display: none;
+}
+
+.toolbar {
+	padding: 8px 6px;
+	display: flex;
+	gap: 4px;
+}
+
+.toolbar input {
+	background-color: transparent;
+	border: 1px solid #52525b;
+	border-radius: 4px;
+	line-height: 20px;
+	padding: 0 12px;
+	height: 38px;
+	flex: 1;
+	width: 0;
+	color: inherit;
+	font-size: 14px;
+}
+
+.toolbar input::placeholder {
+	color: #71717a;
+}
+
+.toolbar input:focus {
+	outline: none;
+	border-color: #766df8;
+}
+
+.btn {
+	background-color: transparent;
+	border: none;
+	padding: 10px;
+	border-radius: 4px;
+	color: inherit;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #3f3f46;
+	color: #f4f4f5;
+}
+
+.summary svg {
+	width: 16px;
+}
+
+.toolbar button .summary h1,
+.summary h2,
+.summary h3,
+.summary h4,
+.summary h5,
+.summary h6 {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 6px;
+	margin: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 6px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 135%;
+	color: #a1a1aa;
+}
+
+#summary {
+	display: block;
+	padding-left: 6px;
+	overflow: scroll;
+}
+
+#summary > * {
+	display: none;
+}
+
+#summary > h2,
+#summary > h3,
+#summary > h4,
+#summary > h5,
+#summary > h6,
+#summary > ul,
+#summary ol:has(ol) {
+	display: block;
+}
+
+.summary h2:has(+ ul),
+.summary h3:has(+ ul),
+.summary h4:has(+ ul),
+.summary h5:has(+ ul),
+.summary h6:has(+ ul),
+.summary h2:has(+ ol),
+.summary h3:has(+ ol),
+.summary h4:has(+ ol),
+.summary h5:has(+ ol),
+.summary h6:has(+ ol),
+.summary h2:has(+ h3),
+.summary h3:has(+ h4),
+.summary h4:has(+ h5),
+.summary h5:has(+ h6) {
+	cursor: pointer;
+	margin: 0 6px 2px 0;
+	border-radius: 4px;
+}
+
+.summary h1 + .nav,
+.summary h2 + .nav,
+.summary h3 + .nav,
+.summary h4 + .nav,
+.summary h5 + .nav,
+.summary h6 + .nav {
+	padding-right: 6px;
+	padding-left: 14px;
+}

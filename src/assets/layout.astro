@@ -1,0 +1,90 @@
+---
+import "./global.css";
+---
+
+<html lang="zh-Hant-TW">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>HackMD Book Mode Editor</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="summary">
+			<input type="checkbox" id="toggle" />
+			<label for="toggle" id="open">
+				<div class="btn" onclick="">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+						<rect width="256" height="256" fill="none"></rect><polyline
+							points="56 48 136 128 56 208"
+							fill="none"
+							stroke="currentColor"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="16"
+						>
+						</polyline><polyline points="136 48 216 128 136 208" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+					</svg>
+				</div>
+			</label>
+			<div class="toolbar">
+				<input type="text" placeholder="搜尋標題..." />
+				<div class="btn" onclick="">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+						<rect width="256" height="256" fill="none"></rect><polyline
+							points="168 96 216 96 216 48"
+							fill="none"
+							stroke="currentColor"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="16"
+						>
+						</polyline><path d="M216,96,187.72,67.72A88,88,0,0,0,64,67" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><polyline
+							points="88 160 40 160 40 208"
+							fill="none"
+							stroke="currentColor"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="16"
+						>
+						</polyline><path d="M40,160l28.28,28.28A88,88,0,0,0,192,189" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+					</svg>
+				</div>
+				<div class="btn" onclick="">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+						<rect width="256" height="256" fill="none"></rect><path
+							d="M92.69,216H48a8,8,0,0,1-8-8V163.31a8,8,0,0,1,2.34-5.65L165.66,34.34a8,8,0,0,1,11.31,0L221.66,79a8,8,0,0,1,0,11.31L98.34,213.66A8,8,0,0,1,92.69,216Z"
+							fill="none"
+							stroke="currentColor"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="16"
+						>
+						</path><line x1="136" y1="64" x2="192" y2="120" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+					</svg>
+				</div>
+				<label for="toggle">
+					<div class="btn" onclick="">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+							<rect width="256" height="256" fill="none"></rect><polyline
+								points="200 208 120 128 200 48"
+								fill="none"
+								stroke="currentColor"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="16"
+							>
+							</polyline><polyline points="120 208 40 128 120 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+						</svg>
+					</div>
+				</label>
+			</div>
+			<div id="summary">
+				<slot />
+			</div>
+		</div>
+	</body>
+</html>
